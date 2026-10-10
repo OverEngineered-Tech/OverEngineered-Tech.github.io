@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OverEngineered Solar | OverEngineered-Tech</title>
+  <meta name="description" content="iPhone Home Screen and Lock Screen widgets for Enphase solar systems. Free for personal use.">
+  <meta name="theme-color" content="#0f1115">
+  <meta property="og:title" content="OverEngineered Solar">
+  <meta property="og:description" content="iPhone Home Screen and Lock Screen widgets for Enphase solar systems. Free for personal use.">
+  <meta property="og:image" content="https://www.overengineered-tech.com/images/enphase-solar-arrays.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%99%EF%B8%8F%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <a class="back" href="index.html">&larr; All projects</a>
+
+    <h1>OverEngineered Solar</h1>
+    <p class="lead">iPhone Home Screen and Lock Screen widgets for Enphase solar systems: today's production, a banked-credit estimate, and fault and dirty-panel warnings. Free for personal use.</p>
+
+    <img class="photo" src="images/enphase-solar-arrays.jpg" width="512" height="385" alt="Ground-mounted solar panels among tall evergreen trees">
+
+    <h2>What it shows</h2>
+    <ul>
+      <li><strong>Past 24 hours:</strong> production and consumption in kWh, green or orange against your 30-day average.</li>
+      <li><strong>Past 30 days:</strong> your average daily production, with a trend line.</li>
+      <li><strong>Banked credits:</strong> an estimate of your net-metering balance, starting from the figure on your last bill.</li>
+      <li><strong>Array status:</strong> a chart of the last 24 hours, your recent peak power, and a verdict: normal, dirty panels, low winter sun, or a service fault reported by Enphase.</li>
+    </ul>
+    <p class="note">It is not live: it updates about once an hour while the sun is up, because Enphase's free plan limits how often it can ask. It reads your data from Enphase's cloud service, and it does not show battery status.</p>
+
+    <h2>What you need</h2>
+    <ul>
+      <li>An iPhone with the free <a href="https://scriptable.app">Scriptable</a> app.</li>
+      <li>An Enphase system and the login you use in the Enphase app.</li>
+      <li>A free Enphase developer account. The setup script walks you through creating one.</li>
+    </ul>
+    <p>Everything runs on your phone, and your settings and keys stay there.</p>
+
+    <h2>Install</h2>
+    <p>Do this on your iPhone, in Safari.</p>
+    <ol>
+      <li>Install <strong>Scriptable</strong> from the App Store.</li>
+      <li>Below, tap <strong>Copy</strong> on the setup script. In Scriptable, tap <strong>+</strong>, paste, then tap <strong>Done</strong>. Press and hold the new script, tap <strong>Rename</strong>, and call it <em>OverEngineered Solar Setup</em>.</li>
+      <li>Do the same with the widget script, and call it <em>OverEngineered Solar</em>.</li>
+      <li>Run <em>OverEngineered Solar Setup</em> and follow its steps.</li>
+      <li>Add a Scriptable widget to your Home Screen or Lock Screen, long-press it, choose <strong>Edit Widget</strong>, and pick <em>OverEngineered Solar</em>.</li>
+    </ol>
+    <p>To update later, copy the new version and paste it over the old script. Your settings are kept.</p>
+    <p>The <a href="/OverEngineered-Solar/Printable-Guide-OverEngineered-Solar.pdf">printable guide</a> has every step with pictures. It is easier to follow with the guide printed or open on a second screen.</p>
+
+    <h2>The files</h2>
+
+    <section class="file" data-file="setup-overengineered-solar.js">
+      <div class="file-head"><h3>1. Setup script</h3><span class="ver"></span></div>
+      <p class="desc">Run it once to connect to Enphase, and again any time you want to change a setting, such as a new banked-credit balance from your bill.</p>
+      <div class="actions">
+        <button type="button" class="btn" data-copy disabled>Copy</button>
+        <a class="btn ghost" data-download href="/OverEngineered-Solar/setup-overengineered-solar.js" download="setup-overengineered-solar.js">Download</a>
+      </div>
+      <p class="status" role="status" aria-live="polite">Loading&hellip;</p>
+      <details>
+        <summary>Show the code, to copy by hand</summary>
+        <button type="button" class="btn ghost small" data-select>Select all</button>
+        <textarea readonly spellcheck="false" aria-label="Setup script code"></textarea>
+      </details>
+    </section>
+
+    <section class="file" data-file="widget-overengineered-solar.js">
+      <div class="file-head"><h3>2. Widget script</h3><span class="ver"></span></div>
+      <p class="desc">The widget itself. In the widget's settings, choose this script.</p>
+      <div class="actions">
+        <button type="button" class="btn" data-copy disabled>Copy</button>
+        <a class="btn ghost" data-download href="/OverEngineered-Solar/widget-overengineered-solar.js" download="widget-overengineered-solar.js">Download</a>
+      </div>
+      <p class="status" role="status" aria-live="polite">Loading&hellip;</p>
+      <details>
+        <summary>Show the code, to copy by hand</summary>
+        <button type="button" class="btn ghost small" data-select>Select all</button>
+        <textarea readonly spellcheck="false" aria-label="Widget script code"></textarea>
+      </details>
+    </section>
+
+    <section class="file" data-file="dev-sandbox-overengineered-solar.js" data-optional>
+      <div class="file-head"><h3>Optional: preview sandbox</h3><span class="ver"></span></div>
+      <p class="desc">Previews how the widget looks using made-up numbers.</p>
+      <div class="actions">
+        <button type="button" class="btn" data-copy disabled>Copy</button>
+        <a class="btn ghost" data-download href="/OverEngineered-Solar/dev-sandbox-overengineered-solar.js" download="dev-sandbox-overengineered-solar.js">Download</a>
+      </div>
+      <p class="status" role="status" aria-live="polite">Loading&hellip;</p>
+      <details>
+        <summary>Show the code, to copy by hand</summary>
+        <button type="button" class="btn ghost small" data-select>Select all</button>
+        <textarea readonly spellcheck="false" aria-label="Preview sandbox code"></textarea>
+      </details>
+    </section>
+
+    <h2>More</h2>
+    <ul>
+      <li><a href="https://github.com/OverEngineered-Tech/OverEngineered-Solar">Project page on GitHub</a>, for anyone who wants the full guide and history.</li>
+    </ul>
+
+    <p class="note">Licensed under the <a href="https://polyformproject.org/licenses/noncommercial/1.0.0/">PolyForm Noncommercial License 1.0.0</a>: personal and other noncommercial use is free. Not affiliated with or endorsed by Enphase Energy, Inc. Enphase is a registered trademark of Enphase Energy, Inc.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 OverEngineered-Tech</p>
+  </footer>
+
+  <script>
+  // Copy / Download buttons. Each .file panel loads its script from the solar project's
+  // own files on this site as soon as the page opens, so a tap on Copy can copy at once
+  // (iPhone Safari only allows copying during the tap itself).
+  (function () {
+    var BASE = "/OverEngineered-Solar/";
+    var GITHUB = "https://github.com/OverEngineered-Tech/OverEngineered-Solar/blob/main/";
+
+    var panels = document.querySelectorAll(".file");
+    for (var i = 0; i < panels.length; i++) { setUp(panels[i]); }
+
+    function setUp(panel) {
+      var name = panel.getAttribute("data-file");
+      var optional = panel.hasAttribute("data-optional");
+      var copyBtn = panel.querySelector("[data-copy]");
+      var selectBtn = panel.querySelector("[data-select]");
+      var status = panel.querySelector(".status");
+      var verEl = panel.querySelector(".ver");
+      var area = panel.querySelector("textarea");
+      var details = panel.querySelector("details");
+      var text = null;
+
+      function say(message) { status.textContent = message; }
+
+      function showManual() {
+        say("Automatic copy did not work here. Open \u201cShow the code\u201d, tap Select all, then Copy.");
+        details.open = true;
+      }
+
+      function legacyCopy() {
+        var temp = document.createElement("textarea");
+        temp.value = text;
+        temp.setAttribute("readonly", "");
+        temp.style.cssText = "position:fixed;top:0;left:0;opacity:0;font-size:16px;";
+        document.body.appendChild(temp);
+        temp.focus();
+        temp.select();
+        temp.setSelectionRange(0, text.length);
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+        document.body.removeChild(temp);
+        if (ok) { copied(); } else { showManual(); }
+      }
+
+      function copied() { say("Copied. Now open Scriptable, tap +, and paste."); }
+
+      fetch(BASE + name, { cache: "no-cache" })
+        .then(function (response) {
+          if (!response.ok) { throw new Error("HTTP " + response.status); }
+          return response.text();
+        })
+        .then(function (loaded) {
+          text = loaded;
+          area.value = loaded;
+          var match = loaded.slice(0, 600).match(/\/\/ \[(\d{4}\.\d{2}\.\d{2}\.\d{4})\]/);
+          if (match) { verEl.textContent = "Version " + match[1]; }
+          copyBtn.disabled = false;
+          say("");
+        })
+        .catch(function () {
+          if (optional) { panel.hidden = true; return; }
+          status.textContent = "This file could not be loaded right now. You can open it on GitHub instead: ";
+          var link = document.createElement("a");
+          link.href = GITHUB + name;
+          link.textContent = name;
+          status.appendChild(link);
+        });
+
+      copyBtn.addEventListener("click", function () {
+        if (text === null) { return; }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(copied, legacyCopy);
+        } else {
+          legacyCopy();
+        }
+      });
+
+      selectBtn.addEventListener("click", function () {
+        area.focus();
+        area.select();
+        area.setSelectionRange(0, area.value.length);
+        say("Selected. Tap Copy in the pop-up menu.");
+      });
+    }
+  })();
+  </script>
+</body>
+</html>

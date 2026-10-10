@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Long-Range Gate Opener | OverEngineered-Tech</title>
+  <meta name="description" content="A button in the car opens the gate through a deliberately over-engineered chain of wireless and wired hops.">
+  <meta name="theme-color" content="#0f1115">
+  <meta property="og:title" content="Long-Range &quot;Bat Cave&quot; Gate Opener">
+  <meta property="og:description" content="A button in the car opens the gate through a deliberately over-engineered chain of wireless and wired hops.">
+  <meta property="og:image" content="https://www.overengineered-tech.com/images/gate-opener-flowchart.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%99%EF%B8%8F%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <a class="back" href="index.html">&larr; All projects</a>
+
+    <h1>Long-Range "Bat Cave" Gate Opener</h1>
+    <p class="lead">A button in the car opens the gate. Getting the signal there takes a deliberately over-engineered chain of hops.</p>
+
+    <a href="images/gate-opener-flowchart.jpg">
+      <img class="photo contain" src="images/gate-opener-flowchart.jpg" width="512" height="279" alt="Diagram of the chain from a car button to a gate opener: Bluetooth, 5G, Starlink, Homey Pro, home Wi-Fi, Ethernet over telephone wire, a gate-side Wi-Fi access point, and a relay at the gate">
+    </a>
+    <p class="note">Tap the diagram to open it full size.</p>
+
+    <h2>The chain</h2>
+    <ol>
+      <li>A Flic button in the car, talking Bluetooth to the phone.</li>
+      <li>The phone, running the Homey app, sends the command over 5G.</li>
+      <li>The command travels over the internet, with Starlink in the path, to the Homey Pro hub at home.</li>
+      <li>Homey Pro passes it on over the home network to the main router.</li>
+      <li>A long run of Ethernet over telephone wire (100 m or more) carries it toward the gate.</li>
+      <li>A dedicated Wi-Fi access point at the gate picks it up.</li>
+      <li>A Shelly relay closes a low-voltage contact on the gate opener.</li>
+    </ol>
+    <p>The diagram counts 8 distinct hops across 5 different kinds of connection.</p>
+
+    <p class="note">More details to come.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 OverEngineered-Tech</p>
+  </footer>
+</body>
+</html>

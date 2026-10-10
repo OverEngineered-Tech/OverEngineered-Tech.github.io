@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat-Activated Fireplace | OverEngineered-Tech</title>
+  <meta name="description" content="A pressure mat under the cat bed tells a Homey Pro hub when the cat settles in, and the fireplace comes on.">
+  <meta name="theme-color" content="#0f1115">
+  <meta property="og:title" content="Cat-Activated Fireplace">
+  <meta property="og:description" content="A pressure mat under the cat bed tells a Homey Pro hub when the cat settles in, and the fireplace comes on.">
+  <meta property="og:image" content="https://www.overengineered-tech.com/images/fireplace-cat.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E%E2%9A%99%EF%B8%8F%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <a class="back" href="index.html">&larr; All projects</a>
+
+    <h1>Cat-Activated Fireplace</h1>
+    <p class="lead">The cat settles into its bed on the hearth, and the fireplace comes on.</p>
+
+    <img class="photo" src="images/fireplace-cat.jpg" width="512" height="384" alt="A cat bed on the hearth in front of a gas fireplace">
+
+    <h2>How it works</h2>
+    <ol>
+      <li>An Ideal Security pressure mat sits under the cat bed.</li>
+      <li>An Aqara Zigbee leak sensor, converted to work as a contact sensor, is connected to the mat and reports when the cat is lying on it.</li>
+      <li>A Homey Pro hub notices the change and switches Zooz ZEN17 relays.</li>
+      <li>The relays light the Heat &amp; Glo fireplace.</li>
+    </ol>
+
+    <p class="note">More details to come. This describes one home's setup; it is not installation instructions, and gas fireplaces must be wired and used safely.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 OverEngineered-Tech</p>
+  </footer>
+</body>
+</html>
