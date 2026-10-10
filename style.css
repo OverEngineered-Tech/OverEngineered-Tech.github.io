@@ -213,7 +213,7 @@ body.home footer { max-width: 1200px; margin: 0 auto; padding: 18px 22px 28px; b
 
 /* ---------- Photo tiles (section pages) ---------- */
 .tiles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 8px 0 24px; }
-.tile { position: relative; display: block; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 8px; border: 1px solid var(--line); background: #0b0d11; color: #fff; text-decoration: none; }
+.tile { position: relative; display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 8px; border: 1px solid var(--line); background: #0b0d11; color: #fff; text-decoration: none; }
 .tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.25s ease; }
 .tile img.contain { object-fit: contain; background: #fff; }
 .tile:hover img { transform: scale(1.04); }
