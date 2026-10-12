@@ -177,6 +177,22 @@ body.home { background: #0b0d11; color: #fff; }
   backdrop-filter: blur(4px);
 }
 .pill:hover { background: rgba(255, 255, 255, 0.16); }
+.hero-more {
+  position: absolute;
+  right: 22px;
+  bottom: 18px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.hero-more__title { color: rgba(255, 255, 255, 0.6); font-weight: 600; letter-spacing: 0.2px; }
+.hero-more:hover { color: rgba(255, 255, 255, 0.8); }
 body.home footer { max-width: 1200px; margin: 0 auto; padding: 18px 22px 28px; border-top: 0; color: rgba(255, 255, 255, 0.55); }
 
 @media (min-width: 900px) {
@@ -265,6 +281,26 @@ textarea {
 .faq details { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 4px 16px; margin: 0 0 10px; }
 .faq summary { font-weight: 600; color: var(--text); padding: 12px 0; }
 .faq details p { margin: 0 0 14px; color: var(--muted); }
+
+/* ---------- Vitruvian Man pages ---------- */
+.vm-photo { max-width: 420px; max-height: 560px; margin: 4px 0 22px; }
+.ratios { width: 100%; max-width: 460px; border-collapse: collapse; margin: 6px 0 22px; font-variant-numeric: tabular-nums; }
+.ratios caption { text-align: left; font-weight: 600; padding-bottom: 8px; }
+.ratios caption .ver { font-weight: 400; margin-left: 8px; }
+.ratios th, .ratios td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+.ratios th { color: var(--muted); font-size: 0.85rem; font-weight: 600; }
+.ratios td:last-child, .ratios th:last-child { text-align: right; }
+.ratios tbody tr:nth-child(odd) { background: var(--surface); }
+.quote { margin: 0 0 18px; }
+.it-list { max-width: 760px; margin-bottom: 8px; }
+.it-row { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.it-row:first-child { padding-top: 4px; }
+.it-row h3 { display: flex; justify-content: space-between; gap: 12px; font-size: 1rem; margin-bottom: 6px; }
+.it-row h3 span { color: var(--accent); font-variant-numeric: tabular-nums; }
+.page .it-row p { margin-bottom: 4px; }
+.it { font-family: Georgia, Cambria, serif; font-style: italic; font-size: 1.05rem; }
+.en { color: var(--muted); }
+.aside { color: var(--muted); font-size: 0.85rem; border-left: 2px solid var(--line); padding-left: 10px; margin-top: 6px; }
 
 /* ---------- Footer ---------- */
 footer { margin-top: 56px; padding: 18px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
