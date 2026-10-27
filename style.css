@@ -313,9 +313,10 @@ footer p { margin-bottom: 6px; }
 }
 
 /* Support link on the Solar page */
-.support { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin: 32px 0 0; }
+.support { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin: 48px 0 0; padding: 22px 24px; border: 2px solid #ffdd00; border-radius: 12px; background: var(--surface); }
 .support-text { flex: 1 1 240px; }
-.support-text p { margin: 0 0 10px; }
+.support-text h2 { margin: 0 0 8px; font-size: 1.25rem; }
+.support-text p { margin: 0 0 12px; }
 .btn.coffee { background: #ffdd00; border-color: #ffdd00; color: #1a1a1a; }
 .support-qr { width: 140px; height: 140px; background: #fff; padding: 6px; border-radius: 8px; border: 1px solid var(--line); }
-.note.fine { margin-top: 56px; font-size: 0.85rem; }
+.note.fine { margin-top: 64px; font-size: 0.85rem; }
