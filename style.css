@@ -311,3 +311,11 @@ footer p { margin-bottom: 6px; }
 @media (min-width: 700px) {
   .page h1 { font-size: 2.4rem; }
 }
+
+/* Support link on the Solar page */
+.support { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin: 32px 0 0; }
+.support-text { flex: 1 1 240px; }
+.support-text p { margin: 0 0 10px; }
+.btn.coffee { background: #ffdd00; border-color: #ffdd00; color: #1a1a1a; }
+.support-qr { width: 140px; height: 140px; background: #fff; padding: 6px; border-radius: 8px; border: 1px solid var(--line); }
+.note.fine { margin-top: 56px; font-size: 0.85rem; }
