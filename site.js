@@ -1,6 +1,29 @@
-// OverEngineered-Tech: slide-in menu and light/dark toggle. No libraries, no tracking.
+// OverEngineered-Tech: slide-in menu, light/dark toggle, and a cookie-free visitor counter (GoatCounter). No other libraries.
 (function () {
   var root = document.documentElement;
+
+  // ----- Visitor counter. Skip your own visits: open the site once with #toggle-goatcounter -----
+  try {
+    var gc = document.createElement("script");
+    gc.async = true;
+    gc.src = "https://gc.zgo.at/count.js";
+    gc.setAttribute("data-goatcounter", "https://overengineeredtech.goatcounter.com/count");
+    document.head.appendChild(gc);
+  } catch (e) { /* the counter is optional; the page still works */ }
+
+  // ----- About page: show the total (the line hides itself if it can't load) -----
+  var line = document.getElementById("visitor-line");
+  var num = document.getElementById("visitor-count");
+  if (line && num && window.fetch) {
+    fetch("https://overengineeredtech.goatcounter.com/counter/TOTAL.json")
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        if (!d || d.count === undefined) { throw new Error("no count"); }
+        num.textContent = d.count;
+        line.hidden = false;
+      })
+      .catch(function () { line.hidden = true; });
+  }
 
   // ----- Light / dark toggle (remembered in this browser only) -----
   function setTheme(value) {
